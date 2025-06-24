@@ -1,20 +1,25 @@
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>{{ data['name'] }} - ARGA QUANT</title>
+    <link rel="stylesheet" href="/static/styles.css">
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
     <h1>ARGA QUANT - O Futuro dos Investimentos</h1>
     <h2>{{ data['name'] }} ({{ data['ticker'] }})</h2>
-    <div id="price_chart"></div>
+
+    <div class="card">
+        <p><strong>P/L:</strong> {{ data['pl'] }}</p>
+        <p><strong>Dividend Yield:</strong> {{ data['dy'] }}%</p>
+    </div>
+
+    <div id="price_chart" class="card"></div>
     <script>
         var plot_data = {{ data['price_plot'] | safe }};
-        Plotly.newPlot('price_chart', plot_data.data, plot_data.layout);
+        Plotly.newPlot('price_chart', plot_data.data, plot_data.layout, {displayModeBar: true});
     </script>
-    <p>P/L: {{ data['pl'] }}</p>
-    <p>Dividend Yield: {{ data['dy'] }}%</p>
+
     <footer>ARGA - Todos os direitos reservados - 2025</footer>
 </body>
 </html>
