@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from utils.get_data import get_company_data, get_all_tickers
+from utils.get_data import get_company_data
 
 app = Flask(__name__)
 
