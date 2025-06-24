@@ -1,6 +1,8 @@
+beautifulsoup4
 flask
-plotly
-pandas
-yfinance
-numpy
 gunicorn
+numpy
+pandas
+plotly
+requests
+yfinance
