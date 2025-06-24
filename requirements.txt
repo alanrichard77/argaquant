@@ -1,8 +1,2 @@
 flask
 gunicorn
-plotly
-pandas
-yfinance
-numpy
-requests
-beautifulsoup4
