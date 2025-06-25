@@ -1,2 +1,7 @@
 flask
 gunicorn
+plotly
+pandas
+yfinance
+requests
+beautifulsoup4
